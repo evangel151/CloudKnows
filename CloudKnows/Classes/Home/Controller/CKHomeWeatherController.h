@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CKHomeWeatherController.h
 //  CloudKnows
 //
 //  Created by  a on 16/7/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CKHomeWeatherController : UIViewController
 
 @end
-

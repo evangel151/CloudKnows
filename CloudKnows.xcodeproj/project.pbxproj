@@ -9,12 +9,22 @@
 /* Begin PBXBuildFile section */
 		007765281D4A640A00FC7D48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 007765271D4A640A00FC7D48 /* main.m */; };
 		0077652B1D4A640A00FC7D48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077652A1D4A640A00FC7D48 /* AppDelegate.m */; };
-		0077652E1D4A640A00FC7D48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077652D1D4A640A00FC7D48 /* ViewController.m */; };
-		007765311D4A640A00FC7D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0077652F1D4A640A00FC7D48 /* Main.storyboard */; };
 		007765331D4A640A00FC7D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007765321D4A640A00FC7D48 /* Assets.xcassets */; };
 		007765361D4A640A00FC7D48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007765341D4A640A00FC7D48 /* LaunchScreen.storyboard */; };
 		007765411D4A640B00FC7D48 /* CloudKnowsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 007765401D4A640B00FC7D48 /* CloudKnowsTests.m */; };
 		0077654C1D4A640B00FC7D48 /* CloudKnowsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077654B1D4A640B00FC7D48 /* CloudKnowsUITests.m */; };
+		0077656F1D4A6B4500FC7D48 /* CKHomeWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077656E1D4A6B4500FC7D48 /* CKHomeWeatherController.m */; };
+		007765721D4A886500FC7D48 /* AFNetWorkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 007765711D4A886500FC7D48 /* AFNetWorkingTool.m */; };
+		00BA7DC31D522F9B008B2F1A /* AboutMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DC21D522F9B008B2F1A /* AboutMeController.m */; };
+		00BA7DC61D523961008B2F1A /* AboutMeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DC51D523960008B2F1A /* AboutMeDetailView.m */; };
+		00BA7DCA1D5248A2008B2F1A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DC91D5248A2008B2F1A /* UIView+Extension.m */; };
+		00BA7DCD1D5255B1008B2F1A /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DCC1D5255B1008B2F1A /* UIViewController+Extension.m */; };
+		00BA7DD01D527C94008B2F1A /* AboutMeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DCF1D527C93008B2F1A /* AboutMeInfoView.m */; };
+		00BA7DD31D527D21008B2F1A /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD21D527D21008B2F1A /* UILabel+Extension.m */; };
+		00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD51D529083008B2F1A /* NullDataView.m */; };
+		00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */; };
+		00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DDB1D529E35008B2F1A /* CKSettingController.m */; };
+		96BE452D018858B2AAFE8109 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A7382763A9AB49533FE16D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +49,6 @@
 		007765271D4A640A00FC7D48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		007765291D4A640A00FC7D48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0077652A1D4A640A00FC7D48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0077652C1D4A640A00FC7D48 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0077652D1D4A640A00FC7D48 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		007765301D4A640A00FC7D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		007765321D4A640A00FC7D48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007765351D4A640A00FC7D48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007765371D4A640A00FC7D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +58,32 @@
 		007765471D4A640B00FC7D48 /* CloudKnowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudKnowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0077654B1D4A640B00FC7D48 /* CloudKnowsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKnowsUITests.m; sourceTree = "<group>"; };
 		0077654D1D4A640B00FC7D48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0077655A1D4A66D000FC7D48 /* CloudKnows-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudKnows-Prefix.pch"; sourceTree = "<group>"; };
+		0077656D1D4A6B4500FC7D48 /* CKHomeWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHomeWeatherController.h; sourceTree = "<group>"; };
+		0077656E1D4A6B4500FC7D48 /* CKHomeWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHomeWeatherController.m; sourceTree = "<group>"; };
+		007765701D4A886500FC7D48 /* AFNetWorkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorkingTool.h; sourceTree = "<group>"; };
+		007765711D4A886500FC7D48 /* AFNetWorkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkingTool.m; sourceTree = "<group>"; };
+		00BA7DC11D522F9B008B2F1A /* AboutMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeController.h; sourceTree = "<group>"; };
+		00BA7DC21D522F9B008B2F1A /* AboutMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeController.m; sourceTree = "<group>"; };
+		00BA7DC41D523960008B2F1A /* AboutMeDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeDetailView.h; sourceTree = "<group>"; };
+		00BA7DC51D523960008B2F1A /* AboutMeDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeDetailView.m; sourceTree = "<group>"; };
+		00BA7DC81D5248A2008B2F1A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		00BA7DC91D5248A2008B2F1A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		00BA7DCB1D5255B1008B2F1A /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		00BA7DCC1D5255B1008B2F1A /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		00BA7DCE1D527C93008B2F1A /* AboutMeInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeInfoView.h; sourceTree = "<group>"; };
+		00BA7DCF1D527C93008B2F1A /* AboutMeInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeInfoView.m; sourceTree = "<group>"; };
+		00BA7DD11D527D21008B2F1A /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		00BA7DD21D527D21008B2F1A /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		00BA7DD41D529083008B2F1A /* NullDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullDataView.h; sourceTree = "<group>"; };
+		00BA7DD51D529083008B2F1A /* NullDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullDataView.m; sourceTree = "<group>"; };
+		00BA7DD71D529DB8008B2F1A /* CKChooseCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKChooseCityController.h; sourceTree = "<group>"; };
+		00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseCityController.m; sourceTree = "<group>"; };
+		00BA7DDA1D529E35008B2F1A /* CKSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSettingController.h; sourceTree = "<group>"; };
+		00BA7DDB1D529E35008B2F1A /* CKSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSettingController.m; sourceTree = "<group>"; };
+		D3B01F57D95076E4539ED864 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E1A7382763A9AB49533FE16D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E739471187261FAA1029D1C3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BE452D018858B2AAFE8109 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +119,8 @@
 				0077653F1D4A640B00FC7D48 /* CloudKnowsTests */,
 				0077654A1D4A640B00FC7D48 /* CloudKnowsUITests */,
 				007765241D4A640A00FC7D48 /* Products */,
+				A937FA77A47AFD48FC088ED6 /* Pods */,
+				DB83D2CCAD0328AB5E92EABC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +137,7 @@
 		007765251D4A640A00FC7D48 /* CloudKnows */ = {
 			isa = PBXGroup;
 			children = (
-				007765291D4A640A00FC7D48 /* AppDelegate.h */,
-				0077652A1D4A640A00FC7D48 /* AppDelegate.m */,
-				0077652C1D4A640A00FC7D48 /* ViewController.h */,
-				0077652D1D4A640A00FC7D48 /* ViewController.m */,
-				0077652F1D4A640A00FC7D48 /* Main.storyboard */,
-				007765321D4A640A00FC7D48 /* Assets.xcassets */,
-				007765341D4A640A00FC7D48 /* LaunchScreen.storyboard */,
-				007765371D4A640A00FC7D48 /* Info.plist */,
+				0077655B1D4A6A6900FC7D48 /* Classes */,
 				007765261D4A640A00FC7D48 /* Supporting Files */,
 			);
 			path = CloudKnows;
@@ -117,7 +146,13 @@
 		007765261D4A640A00FC7D48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				007765291D4A640A00FC7D48 /* AppDelegate.h */,
+				0077652A1D4A640A00FC7D48 /* AppDelegate.m */,
+				007765371D4A640A00FC7D48 /* Info.plist */,
+				007765321D4A640A00FC7D48 /* Assets.xcassets */,
+				007765341D4A640A00FC7D48 /* LaunchScreen.storyboard */,
 				007765271D4A640A00FC7D48 /* main.m */,
+				0077655A1D4A66D000FC7D48 /* CloudKnows-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +175,196 @@
 			path = CloudKnowsUITests;
 			sourceTree = "<group>";
 		};
+		0077655B1D4A6A6900FC7D48 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0077655C1D4A6A6900FC7D48 /* Choose */,
+				007765601D4A6A6900FC7D48 /* Home */,
+				007765641D4A6A6900FC7D48 /* Other */,
+				007765691D4A6A6900FC7D48 /* Setting */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0077655C1D4A6A6900FC7D48 /* Choose */ = {
+			isa = PBXGroup;
+			children = (
+				0077655D1D4A6A6900FC7D48 /* Controller */,
+				0077655E1D4A6A6900FC7D48 /* Model */,
+				0077655F1D4A6A6900FC7D48 /* View */,
+			);
+			path = Choose;
+			sourceTree = "<group>";
+		};
+		0077655D1D4A6A6900FC7D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DD71D529DB8008B2F1A /* CKChooseCityController.h */,
+				00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0077655E1D4A6A6900FC7D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0077655F1D4A6A6900FC7D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		007765601D4A6A6900FC7D48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				007765611D4A6A6900FC7D48 /* Controller */,
+				007765621D4A6A6900FC7D48 /* Model */,
+				007765631D4A6A6900FC7D48 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		007765611D4A6A6900FC7D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0077656D1D4A6B4500FC7D48 /* CKHomeWeatherController.h */,
+				0077656E1D4A6B4500FC7D48 /* CKHomeWeatherController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		007765621D4A6A6900FC7D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		007765631D4A6A6900FC7D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DD41D529083008B2F1A /* NullDataView.h */,
+				00BA7DD51D529083008B2F1A /* NullDataView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		007765641D4A6A6900FC7D48 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DC71D5247B4008B2F1A /* Category */,
+				007765651D4A6A6900FC7D48 /* Controller */,
+				007765661D4A6A6900FC7D48 /* Model */,
+				007765671D4A6A6900FC7D48 /* Tool */,
+				007765681D4A6A6900FC7D48 /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		007765651D4A6A6900FC7D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DC11D522F9B008B2F1A /* AboutMeController.h */,
+				00BA7DC21D522F9B008B2F1A /* AboutMeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		007765661D4A6A6900FC7D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		007765671D4A6A6900FC7D48 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				007765701D4A886500FC7D48 /* AFNetWorkingTool.h */,
+				007765711D4A886500FC7D48 /* AFNetWorkingTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		007765681D4A6A6900FC7D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DC41D523960008B2F1A /* AboutMeDetailView.h */,
+				00BA7DC51D523960008B2F1A /* AboutMeDetailView.m */,
+				00BA7DCE1D527C93008B2F1A /* AboutMeInfoView.h */,
+				00BA7DCF1D527C93008B2F1A /* AboutMeInfoView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		007765691D4A6A6900FC7D48 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				0077656A1D4A6A6900FC7D48 /* Controller */,
+				0077656B1D4A6A6900FC7D48 /* Model */,
+				0077656C1D4A6A6900FC7D48 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		0077656A1D4A6A6900FC7D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DDA1D529E35008B2F1A /* CKSettingController.h */,
+				00BA7DDB1D529E35008B2F1A /* CKSettingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0077656B1D4A6A6900FC7D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0077656C1D4A6A6900FC7D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00BA7DC71D5247B4008B2F1A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				00BA7DC81D5248A2008B2F1A /* UIView+Extension.h */,
+				00BA7DC91D5248A2008B2F1A /* UIView+Extension.m */,
+				00BA7DCB1D5255B1008B2F1A /* UIViewController+Extension.h */,
+				00BA7DCC1D5255B1008B2F1A /* UIViewController+Extension.m */,
+				00BA7DD11D527D21008B2F1A /* UILabel+Extension.h */,
+				00BA7DD21D527D21008B2F1A /* UILabel+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A937FA77A47AFD48FC088ED6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3B01F57D95076E4539ED864 /* Pods.debug.xcconfig */,
+				E739471187261FAA1029D1C3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB83D2CCAD0328AB5E92EABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1A7382763A9AB49533FE16D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 007765501D4A640B00FC7D48 /* Build configuration list for PBXNativeTarget "CloudKnows" */;
 			buildPhases = (
+				F4EA6AB73505581DDBA999CB /* Check Pods Manifest.lock */,
 				0077651F1D4A640A00FC7D48 /* Sources */,
 				007765201D4A640A00FC7D48 /* Frameworks */,
 				007765211D4A640A00FC7D48 /* Resources */,
+				E7818B03A32C2A036FD3754B /* Embed Pods Frameworks */,
+				DE85930E937FF458F303B4A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +476,6 @@
 			files = (
 				007765361D4A640A00FC7D48 /* LaunchScreen.storyboard in Resources */,
 				007765331D4A640A00FC7D48 /* Assets.xcassets in Resources */,
-				007765311D4A640A00FC7D48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +495,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DE85930E937FF458F303B4A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7818B03A32C2A036FD3754B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4EA6AB73505581DDBA999CB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0077651F1D4A640A00FC7D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0077652E1D4A640A00FC7D48 /* ViewController.m in Sources */,
 				0077652B1D4A640A00FC7D48 /* AppDelegate.m in Sources */,
+				00BA7DD01D527C94008B2F1A /* AboutMeInfoView.m in Sources */,
 				007765281D4A640A00FC7D48 /* main.m in Sources */,
+				00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */,
+				00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */,
+				007765721D4A886500FC7D48 /* AFNetWorkingTool.m in Sources */,
+				00BA7DCA1D5248A2008B2F1A /* UIView+Extension.m in Sources */,
+				00BA7DCD1D5255B1008B2F1A /* UIViewController+Extension.m in Sources */,
+				00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */,
+				00BA7DC61D523961008B2F1A /* AboutMeDetailView.m in Sources */,
+				00BA7DC31D522F9B008B2F1A /* AboutMeController.m in Sources */,
+				00BA7DD31D527D21008B2F1A /* UILabel+Extension.m in Sources */,
+				0077656F1D4A6B4500FC7D48 /* CKHomeWeatherController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +596,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0077652F1D4A640A00FC7D48 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				007765301D4A640A00FC7D48 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		007765341D4A640A00FC7D48 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,23 +691,33 @@
 		};
 		007765511D4A640B00FC7D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B01F57D95076E4539ED864 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CloudKnows/CloudKnows-Prefix.pch";
 				INFOPLIST_FILE = CloudKnows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ycdsq.www.CloudKnows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		007765521D4A640B00FC7D48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E739471187261FAA1029D1C3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CloudKnows/CloudKnows-Prefix.pch";
 				INFOPLIST_FILE = CloudKnows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ycdsq.www.CloudKnows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -501,6 +788,7 @@
 				007765521D4A640B00FC7D48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		007765531D4A640B00FC7D48 /* Build configuration list for PBXNativeTarget "CloudKnowsTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +797,7 @@
 				007765551D4A640B00FC7D48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		007765561D4A640B00FC7D48 /* Build configuration list for PBXNativeTarget "CloudKnowsUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +806,7 @@
 				007765581D4A640B00FC7D48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
