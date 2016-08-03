@@ -24,6 +24,9 @@
 		00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD51D529083008B2F1A /* NullDataView.m */; };
 		00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */; };
 		00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DDB1D529E35008B2F1A /* CKSettingController.m */; };
+		00BA7DDF1D52A6A9008B2F1A /* CKSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DDE1D52A6A9008B2F1A /* CKSettingCell.m */; };
+		00BA7DE21D52A6DC008B2F1A /* CKAddCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */; };
+		00BA7DE51D52A727008B2F1A /* CKHomeWeatherShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */; };
 		96BE452D018858B2AAFE8109 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A7382763A9AB49533FE16D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,12 @@
 		00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseCityController.m; sourceTree = "<group>"; };
 		00BA7DDA1D529E35008B2F1A /* CKSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSettingController.h; sourceTree = "<group>"; };
 		00BA7DDB1D529E35008B2F1A /* CKSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSettingController.m; sourceTree = "<group>"; };
+		00BA7DDD1D52A6A9008B2F1A /* CKSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSettingCell.h; sourceTree = "<group>"; };
+		00BA7DDE1D52A6A9008B2F1A /* CKSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSettingCell.m; sourceTree = "<group>"; };
+		00BA7DE01D52A6DC008B2F1A /* CKAddCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddCityCell.h; sourceTree = "<group>"; };
+		00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddCityCell.m; sourceTree = "<group>"; };
+		00BA7DE31D52A727008B2F1A /* CKHomeWeatherShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHomeWeatherShowCell.h; sourceTree = "<group>"; };
+		00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHomeWeatherShowCell.m; sourceTree = "<group>"; };
 		D3B01F57D95076E4539ED864 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E1A7382763A9AB49533FE16D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E739471187261FAA1029D1C3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +224,8 @@
 		0077655F1D4A6A6900FC7D48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00BA7DE01D52A6DC008B2F1A /* CKAddCityCell.h */,
+				00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +261,8 @@
 			children = (
 				00BA7DD41D529083008B2F1A /* NullDataView.h */,
 				00BA7DD51D529083008B2F1A /* NullDataView.m */,
+				00BA7DE31D52A727008B2F1A /* CKHomeWeatherShowCell.h */,
+				00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +344,8 @@
 		0077656C1D4A6A6900FC7D48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00BA7DDD1D52A6A9008B2F1A /* CKSettingCell.h */,
+				00BA7DDE1D52A6A9008B2F1A /* CKSettingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,10 +567,13 @@
 				00BA7DD01D527C94008B2F1A /* AboutMeInfoView.m in Sources */,
 				007765281D4A640A00FC7D48 /* main.m in Sources */,
 				00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */,
+				00BA7DE21D52A6DC008B2F1A /* CKAddCityCell.m in Sources */,
+				00BA7DDF1D52A6A9008B2F1A /* CKSettingCell.m in Sources */,
 				00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */,
 				007765721D4A886500FC7D48 /* AFNetWorkingTool.m in Sources */,
 				00BA7DCA1D5248A2008B2F1A /* UIView+Extension.m in Sources */,
 				00BA7DCD1D5255B1008B2F1A /* UIViewController+Extension.m in Sources */,
+				00BA7DE51D52A727008B2F1A /* CKHomeWeatherShowCell.m in Sources */,
 				00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */,
 				00BA7DC61D523961008B2F1A /* AboutMeDetailView.m in Sources */,
 				00BA7DC31D522F9B008B2F1A /* AboutMeController.m in Sources */,

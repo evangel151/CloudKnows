@@ -14,6 +14,7 @@
 #import "AboutMeController.h"
 
 #import "NullDataView.h"
+#import "CKHomeWeatherShowCell.h"
 
 #import "AFNetWorkingTool.h"
 #import <Masonry.h>
@@ -217,7 +218,7 @@
             UIButton *button = [[UIButton alloc] initWithFrame:_operationButton.frame];
             button.imageView.contentMode = UIViewContentModeScaleToFill;
             [button setImage:[UIImage imageNamed:imageNameArray[i]] forState:UIControlStateNormal];
-            [button setBackgroundColor:LJRandomColor];
+//            [button setBackgroundColor:LJRandomColor];
             button.alpha = 0.0;
             [_operationBtnArray addObject:button];
             [self.view addSubview:button];
