@@ -16,6 +16,7 @@
 #import "NullDataView.h"
 #import "CKHomeWeatherShowCell.h"
 
+#import "CKCityManager.h"
 #import "AFNetWorkingTool.h"
 #import <Masonry.h>
 
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) UIImageView *wallerImageView;
 /** 操作按钮 - 主要 */
 @property (nonatomic, strong) UIButton *operationButton;
+
+@property (nonatomic, strong) NullDataView *nullView;
 
 /********************/
 
@@ -54,7 +57,7 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
     [self setupRandomWaller];
-    [self setUpNullDataView];
+    [self setupNullDataView];
 }
 
 - (void)setupTableView {
@@ -85,8 +88,13 @@
 }
 
 // 设置无数据时显示的界面
-- (void)setUpNullDataView {
-    
+- (void)setupNullDataView {
+    if ([[CKCityManager shareInstance] hasSelectedCity] == NO) {
+        if (!_nullView) {
+            
+        }
+        
+    }
 }
 
 

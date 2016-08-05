@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CKHomeWeatherController.h"
+#import "CKCityManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
+    
+    [self setInitData]; // 配置初始数据
     
     CKHomeWeatherController *ck = [[CKHomeWeatherController alloc] init];
     UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:ck];
@@ -48,6 +51,25 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Custom
+/** 是否第一次启动，如果是 则配置热门城市列表 */
+- (void)setInitData{
+    BOOL isFirstStart;
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:IsFirstStartKey];
+    if (obj == nil) {
+        isFirstStart = YES;
+    }else {
+        isFirstStart = NO;
+    }
+    
+    if (isFirstStart ) {
+        [[CKCityManager shareInstance] setupHotCities];//配置热门城市列表
+        isFirstStart = NO;
+        // 存储YES至 对应的Key
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:isFirstStart] forKey:IsFirstStartKey];
+    }
 }
 
 @end
