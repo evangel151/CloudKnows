@@ -8,6 +8,27 @@
 
 #import "CKHomeWeatherShowCell.h"
 
+#import "CKCityModel.h"
+
+#import <Masonry.h>
+
+@interface CKHomeWeatherShowCell ()
+
+@property (nonatomic, strong) UIImageView *weatherIcon;
+
+
+@end
+
 @implementation CKHomeWeatherShowCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
+
+
 
 @end

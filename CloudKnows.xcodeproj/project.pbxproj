@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00044A621D55209700E9B611 /* CKChooseCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00044A611D55209700E9B611 /* CKChooseCityCell.m */; };
 		003F9BFF1D5396DB0048A307 /* CKCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F9BFE1D5396DB0048A307 /* CKCityModel.m */; };
 		003F9C021D5399140048A307 /* CKCityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F9C011D5399140048A307 /* CKCityManager.m */; };
 		003F9C051D5415150048A307 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F9C041D5415150048A307 /* UIButton+Extension.m */; };
+		0045D1751D56767C002EF97F /* NullDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045D1741D56767C002EF97F /* NullDataView.m */; };
 		007765281D4A640A00FC7D48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 007765271D4A640A00FC7D48 /* main.m */; };
 		0077652B1D4A640A00FC7D48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0077652A1D4A640A00FC7D48 /* AppDelegate.m */; };
 		007765331D4A640A00FC7D48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007765321D4A640A00FC7D48 /* Assets.xcassets */; };
@@ -24,11 +26,9 @@
 		00BA7DCD1D5255B1008B2F1A /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DCC1D5255B1008B2F1A /* UIViewController+Extension.m */; };
 		00BA7DD01D527C94008B2F1A /* AboutMeInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DCF1D527C93008B2F1A /* AboutMeInfoView.m */; };
 		00BA7DD31D527D21008B2F1A /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD21D527D21008B2F1A /* UILabel+Extension.m */; };
-		00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD51D529083008B2F1A /* NullDataView.m */; };
 		00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */; };
 		00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DDB1D529E35008B2F1A /* CKSettingController.m */; };
 		00BA7DDF1D52A6A9008B2F1A /* CKSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DDE1D52A6A9008B2F1A /* CKSettingCell.m */; };
-		00BA7DE21D52A6DC008B2F1A /* CKAddCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */; };
 		00BA7DE51D52A727008B2F1A /* CKHomeWeatherShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */; };
 		96BE452D018858B2AAFE8109 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A7382763A9AB49533FE16D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,12 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00044A601D55209700E9B611 /* CKChooseCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKChooseCityCell.h; sourceTree = "<group>"; };
+		00044A611D55209700E9B611 /* CKChooseCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseCityCell.m; sourceTree = "<group>"; };
 		003F9BFD1D5396DB0048A307 /* CKCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCityModel.h; sourceTree = "<group>"; };
 		003F9BFE1D5396DB0048A307 /* CKCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCityModel.m; sourceTree = "<group>"; };
 		003F9C001D5399140048A307 /* CKCityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCityManager.h; sourceTree = "<group>"; };
 		003F9C011D5399140048A307 /* CKCityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCityManager.m; sourceTree = "<group>"; };
 		003F9C031D5415150048A307 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
 		003F9C041D5415150048A307 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		0045D1731D56767C002EF97F /* NullDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullDataView.h; sourceTree = "<group>"; };
+		0045D1741D56767C002EF97F /* NullDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullDataView.m; sourceTree = "<group>"; };
 		007765231D4A640A00FC7D48 /* CloudKnows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKnows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007765271D4A640A00FC7D48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		007765291D4A640A00FC7D48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,16 +91,12 @@
 		00BA7DCF1D527C93008B2F1A /* AboutMeInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeInfoView.m; sourceTree = "<group>"; };
 		00BA7DD11D527D21008B2F1A /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
 		00BA7DD21D527D21008B2F1A /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
-		00BA7DD41D529083008B2F1A /* NullDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullDataView.h; sourceTree = "<group>"; };
-		00BA7DD51D529083008B2F1A /* NullDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullDataView.m; sourceTree = "<group>"; };
 		00BA7DD71D529DB8008B2F1A /* CKChooseCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKChooseCityController.h; sourceTree = "<group>"; };
 		00BA7DD81D529DB8008B2F1A /* CKChooseCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKChooseCityController.m; sourceTree = "<group>"; };
 		00BA7DDA1D529E35008B2F1A /* CKSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSettingController.h; sourceTree = "<group>"; };
 		00BA7DDB1D529E35008B2F1A /* CKSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSettingController.m; sourceTree = "<group>"; };
 		00BA7DDD1D52A6A9008B2F1A /* CKSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKSettingCell.h; sourceTree = "<group>"; };
 		00BA7DDE1D52A6A9008B2F1A /* CKSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSettingCell.m; sourceTree = "<group>"; };
-		00BA7DE01D52A6DC008B2F1A /* CKAddCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAddCityCell.h; sourceTree = "<group>"; };
-		00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAddCityCell.m; sourceTree = "<group>"; };
 		00BA7DE31D52A727008B2F1A /* CKHomeWeatherShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHomeWeatherShowCell.h; sourceTree = "<group>"; };
 		00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHomeWeatherShowCell.m; sourceTree = "<group>"; };
 		D3B01F57D95076E4539ED864 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0045D1721D56767C002EF97F /* NullData */ = {
+			isa = PBXGroup;
+			children = (
+				0045D1731D56767C002EF97F /* NullDataView.h */,
+				0045D1741D56767C002EF97F /* NullDataView.m */,
+			);
+			path = NullData;
+			sourceTree = "<group>";
+		};
+		0045D1761D5676A2002EF97F /* CKWeatherDetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CKWeatherDetailView;
+			sourceTree = "<group>";
+		};
 		0077651A1D4A640A00FC7D48 = {
 			isa = PBXGroup;
 			children = (
@@ -235,8 +251,8 @@
 		0077655F1D4A6A6900FC7D48 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				00BA7DE01D52A6DC008B2F1A /* CKAddCityCell.h */,
-				00BA7DE11D52A6DC008B2F1A /* CKAddCityCell.m */,
+				00044A601D55209700E9B611 /* CKChooseCityCell.h */,
+				00044A611D55209700E9B611 /* CKChooseCityCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,8 +286,8 @@
 		007765631D4A6A6900FC7D48 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				00BA7DD41D529083008B2F1A /* NullDataView.h */,
-				00BA7DD51D529083008B2F1A /* NullDataView.m */,
+				0045D1761D5676A2002EF97F /* CKWeatherDetailView */,
+				0045D1721D56767C002EF97F /* NullData */,
 				00BA7DE31D52A727008B2F1A /* CKHomeWeatherShowCell.h */,
 				00BA7DE41D52A727008B2F1A /* CKHomeWeatherShowCell.m */,
 			);
@@ -583,9 +599,8 @@
 				007765281D4A640A00FC7D48 /* main.m in Sources */,
 				00BA7DD91D529DB8008B2F1A /* CKChooseCityController.m in Sources */,
 				003F9C021D5399140048A307 /* CKCityManager.m in Sources */,
-				00BA7DE21D52A6DC008B2F1A /* CKAddCityCell.m in Sources */,
 				00BA7DDF1D52A6A9008B2F1A /* CKSettingCell.m in Sources */,
-				00BA7DD61D529083008B2F1A /* NullDataView.m in Sources */,
+				0045D1751D56767C002EF97F /* NullDataView.m in Sources */,
 				007765721D4A886500FC7D48 /* AFNetWorkingTool.m in Sources */,
 				003F9C051D5415150048A307 /* UIButton+Extension.m in Sources */,
 				00BA7DCA1D5248A2008B2F1A /* UIView+Extension.m in Sources */,
@@ -594,6 +609,7 @@
 				00BA7DDC1D529E35008B2F1A /* CKSettingController.m in Sources */,
 				00BA7DC61D523961008B2F1A /* AboutMeDetailView.m in Sources */,
 				00BA7DC31D522F9B008B2F1A /* AboutMeController.m in Sources */,
+				00044A621D55209700E9B611 /* CKChooseCityCell.m in Sources */,
 				003F9BFF1D5396DB0048A307 /* CKCityModel.m in Sources */,
 				00BA7DD31D527D21008B2F1A /* UILabel+Extension.m in Sources */,
 				0077656F1D4A6B4500FC7D48 /* CKHomeWeatherController.m in Sources */,

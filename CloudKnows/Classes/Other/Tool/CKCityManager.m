@@ -63,7 +63,6 @@ static CKCityManager *manager;
 }
 
 - (NSArray *)getHotCities {
-    
     WeakSelf;
     if (_hotCities == nil || _hotCities.count == 0) {
         NSArray *hotCitiesArray = [[NSUserDefaults standardUserDefaults] objectForKey:HotCitiesKey];
@@ -73,13 +72,12 @@ static CKCityManager *manager;
             [weakSelf.hotCities addObject:model];
         }];
     }
-    
     return _hotCities;
 }
 
 - (void)saveCityWithModel:(CKCityModel *)model {
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    [SVProgressHUD setFadeOutAnimationDuration:1];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setFadeOutAnimationDuration:0.5f];
     // 先从本地获取保存的城市列表
     NSMutableArray *savedArray = [[NSUserDefaults standardUserDefaults] objectForKey:UserSelectedCityListKey];
     __block BOOL isHasSaved = NO;

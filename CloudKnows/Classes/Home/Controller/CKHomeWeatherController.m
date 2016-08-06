@@ -42,6 +42,8 @@
 
 @implementation CKHomeWeatherController
 
+static NSString *cellIdentifier = @"weatherCell";
+
 #pragma mark - 构成
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,6 +52,7 @@
     
     [self setupTableView];
     [self setupOpertaionButton];
+    
 }
 
 
@@ -58,10 +61,25 @@
     self.navigationController.navigationBar.hidden = YES;
     [self setupRandomWaller];
     [self setupNullDataView];
+
 }
 
 - (void)setupTableView {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+                                              style:UITableViewStylePlain];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.rowHeight = 120;
+    _tableView.hidden = YES;
+    _tableView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_tableView];
     
+    // 将操作按钮移至少顶层
+    [self.view bringSubviewToFront:_operationButton];
+    
+    [_tableView registerClass:[CKHomeWeatherShowCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)setupOpertaionButton {
@@ -89,11 +107,18 @@
 
 // 设置无数据时显示的界面
 - (void)setupNullDataView {
-    if ([[CKCityManager shareInstance] hasSelectedCity] == NO) {
+    if (![[CKCityManager shareInstance] hasSelectedCity]) {
         if (!_nullView) {
-            
+             NSLog(@"logSomething——————");
+            _nullView = [[NullDataView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+            [self.view addSubview:_nullView];
         }
-        
+        _nullView.hidden = NO;
+        _tableView.hidden = YES;
+    } else { // 如果不是第一次进入App,显示tableView 并加载数据
+        _nullView.hidden = YES;
+        _tableView.hidden = NO;
+        [self loadNewData];
     }
 }
 
@@ -106,7 +131,7 @@
     WeakSelf;
     if (_showOperationButtons) {
         _showOperationButtons = NO;
-        [self.operationBtnArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [weakSelf.operationBtnArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             UIButton *btn = (UIButton *)obj;
             CGRect frame = weakSelf.operationButton.frame;
             float duration = 0.0;
@@ -120,7 +145,7 @@
         }];
     }else{
         _showOperationButtons = YES;
-        [self.operationBtnArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [weakSelf.operationBtnArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             UIButton *button = (UIButton *)obj;
             //更改后 frame
             CGRect frame = button.frame;
@@ -189,11 +214,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+//    static NSString *ID = @"cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+//    }
+    CKHomeWeatherShowCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    cell.backgroundColor = [UIColor colorWithRed:100/255.0 green:100/255.0 blue:188/255.0 alpha:0.3];
+    
     return cell;
 }
 
@@ -210,7 +239,6 @@
     if (!_wallerImageView) {
         _wallerImageView = [[UIImageView alloc] init];
         _wallerImageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        
         [self.view insertSubview:_wallerImageView atIndex:0];
     }
     return _wallerImageView;
@@ -226,7 +254,6 @@
             UIButton *button = [[UIButton alloc] initWithFrame:_operationButton.frame];
             button.imageView.contentMode = UIViewContentModeScaleToFill;
             [button setImage:[UIImage imageNamed:imageNameArray[i]] forState:UIControlStateNormal];
-//            [button setBackgroundColor:LJRandomColor];
             button.alpha = 0.0;
             [_operationBtnArray addObject:button];
             [self.view addSubview:button];
