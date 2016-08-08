@@ -21,4 +21,6 @@ typedef enum {
 @property (nonatomic, strong) CKCityModel *cityModel;
 @property (nonatomic, assign) CKChooseCityCellType type;
 
++ (instancetype)cellWithUITableView:(UITableView *)tableView CityModel:(CKCityModel *)model;
+
 @end

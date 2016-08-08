@@ -26,7 +26,7 @@
 #import "UIViewController+Extension.h"
 #import "UILabel+Extension.h"
 #import "UIButton+Extension.h"
-
+#import "UIImage+Extension.h"
 
 // -MARK: 用户存储相关
 #define IsFirstStartKey         @"IsFirstStartKey"        //是否第一次启动app

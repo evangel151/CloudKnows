@@ -7,6 +7,7 @@
 //
 
 #import "CKCityModel.h"
+#import <MJExtension.h>
 
 #define ProvinceName    @"ProvinceName"
 #define DistrictName    @"DistrictName"
@@ -36,5 +37,40 @@
     [aCoder encodeObject:_area_id forKey:@"AreaID"];
 }
 
++ (void)setup {
+    [CKCityModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"province_cn" : @"province_cn",
+                 @"district_cn" : @"district_cn",
+                 @"name_cn" : @"name_cn",
+                 @"name_en" : @"name_en",
+                 @"area_id" : @"area_id",
+                 };
+    }];
+}
+
+@end
+
+@implementation CKCityData
+
++ (CKCityData *)initWithString:(NSString *)JSONString {
+    [CKCityModel setup];
+    
+    // 使用MJExtension进行字典映射
+    [CKCityData mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"cityList" : @"retData",
+                 };
+    }];
+    
+    [CKCityData mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"cityList" : @"CKCityModel",
+                 };
+    }];
+    
+    CKCityData *data = [CKCityData mj_objectWithKeyValues:JSONString];
+    return data;
+}
 
 @end

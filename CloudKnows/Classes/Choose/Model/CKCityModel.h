@@ -22,3 +22,11 @@
 @property (nonatomic,strong) NSString *area_id;
 
 @end
+
+@interface CKCityData : NSObject
+
+@property (nonatomic, strong) NSMutableArray *cityList;
+
++ (CKCityData *)initWithString:(NSString *)JSONString;
+
+@end

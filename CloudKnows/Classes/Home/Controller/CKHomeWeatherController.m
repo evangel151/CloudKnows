@@ -14,10 +14,13 @@
 #import "AboutMeController.h"
 
 #import "NullDataView.h"
+#import "CKWeatherDetailView.h"
 #import "CKHomeWeatherShowCell.h"
 
+#import "CKWeatherData.h"
+#import "CKCityModel.h"
 #import "CKCityManager.h"
-#import "AFNetWorkingTool.h"
+#import "CKNetWorkManager.h"
 #import <Masonry.h>
 
 @interface CKHomeWeatherController ()<UITableViewDelegate,UITableViewDataSource>
@@ -49,7 +52,7 @@ static NSString *cellIdentifier = @"weatherCell";
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
     _showOperationButtons = NO;
-    
+    _weatherList = [NSMutableArray array];
     [self setupTableView];
     [self setupOpertaionButton];
     
@@ -66,12 +69,12 @@ static NSString *cellIdentifier = @"weatherCell";
 
 - (void)setupTableView {
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT)
                                               style:UITableViewStylePlain];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.rowHeight = 120;
+    _tableView.rowHeight = 88;
     _tableView.hidden = YES;
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
@@ -124,7 +127,6 @@ static NSString *cellIdentifier = @"weatherCell";
 
 
 #pragma mark - custom methods (自定义)
-
 
 - (void)showButtonsArray {
     
@@ -204,13 +206,35 @@ static NSString *cellIdentifier = @"weatherCell";
 #pragma mark - 数据处理
 
 - (void)loadNewData {
+    [_weatherList removeAllObjects];
     
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithStatus:@"正在加载"];
+    NSArray *arr = [[CKCityManager shareInstance] savedCities];
+    if (arr && arr.count > 0) {
+        WeakSelf;
+        [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            CKCityModel *model = obj;
+            [CKNetWorkManager requestDataWithCityID:model.area_id Complete:^(id obj) {
+                [weakSelf.weatherList addObject:obj];
+                
+                if (arr.count == weakSelf.weatherList.count) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [weakSelf.tableView reloadData];
+                        [SVProgressHUD dismissWithDelay:0.5];
+                    });
+                }
+            }];
+        }];
+    } else {
+        [SVProgressHUD showErrorWithStatus:@"还没有选择的城市，快去添加一个吧"];
+    }
 }
 
 #pragma mark - UITableView 数据源 & 代理
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _weatherList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -220,14 +244,16 @@ static NSString *cellIdentifier = @"weatherCell";
 //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
 //    }
     CKHomeWeatherShowCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    cell.backgroundColor = [UIColor colorWithRed:100/255.0 green:100/255.0 blue:188/255.0 alpha:0.3];
+    CKWeatherData *data = [_weatherList objectAtIndex:indexPath.row];
+    cell.data = data;
+    cell.backgroundColor = [UIColor colorWithRed:100/255.0 green:100/255.0 blue:188/255.0 alpha:0.2];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-     NSLog(@"即将弹出WeatherDetail——————");
+
+    [CKWeatherDetailView show];
 }
 
 

@@ -12,6 +12,8 @@
 #import "CKChooseCityCell.h"
 
 #import "CKCityModel.h"
+#import "CKNetWorkManager.h"
+#import "CKCityManager.h"
 
 @interface CKChooseCityController () <UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 
@@ -73,7 +75,7 @@ static NSString *cellID = @"cellIndentifier";
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     
-    [_tableView registerClass:[CKChooseCityCell class] forCellReuseIdentifier:cellID];
+//    [_tableView registerClass:[CKChooseCityCell class] forCellReuseIdentifier:cellID];
 }
 
 //- (void)setupHotCities {
@@ -102,7 +104,7 @@ static NSString *cellID = @"cellIndentifier";
                                              fontSize:17
                                                 lines:1
                                         textAlignment:NSTextAlignmentLeft];
-    titleLabel.text = section ? @"   热搜城市" : @"   搜索结果";
+    titleLabel.text = section ? @"   搜索结果" : @"   热搜城市";
     return titleLabel;
 }
 
@@ -112,14 +114,8 @@ static NSString *cellID = @"cellIndentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CKChooseCityCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (indexPath.section == 0) {
-        cell.type = CKChooseCityCellTypeHotCity;
-        cell.cityModel = self.hotCityList[indexPath.row];
-    } else if (indexPath.section == 1) {
-        cell.type = CKChooseCityCellTypeSearch;
-        cell.cityModel = _searchCityList[indexPath.row];
-    }
+    CKCityModel *model = indexPath.section == 0 ? _hotCityList[indexPath.row] : _searchCityList[indexPath.row];
+    CKChooseCityCell *cell = [CKChooseCityCell cellWithUITableView:tableView CityModel:model];
     return cell;
 }
 
@@ -143,9 +139,23 @@ static NSString *cellID = @"cellIndentifier";
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-    [SVProgressHUD setFadeOutAnimationDuration:0.5f];
-    [SVProgressHUD showSuccessWithStatus:@"testForSearchBar"];
-    
+    [SVProgressHUD showWithStatus:@"Searching...."];
+    WeakSelf;
+    [CKNetWorkManager requestDataWithCityName:searchBar.text Complete:^(id obj) {
+        CKCityData *data = (CKCityData *)obj;
+        if (data.cityList == nil || data.cityList.count == 0) {
+            [SVProgressHUD showErrorWithStatus:@"未找到该城市"];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                weakSelf.searchCityList = data.cityList;
+                [weakSelf.tableView reloadData];
+            });
+        }
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }];
 }
 
 

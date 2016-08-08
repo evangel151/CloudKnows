@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CKWeatherData;
 
 @interface CKHomeWeatherShowCell : UITableViewCell
+
+@property (nonatomic, strong) CKWeatherData *data;
 
 @end

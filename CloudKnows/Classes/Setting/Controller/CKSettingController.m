@@ -170,6 +170,8 @@ static NSString *cellID = @"settingCell";
            } completion:^(BOOL finished) {
                
                if (finished) {
+                   
+                   // FIXME: 连续快速的删除cell时会导致异步线程发生顺序错误 --> 导致程序崩溃
                    [weakSelf.tableView deleteRowsAtIndexPaths:@[indexPath]
                                              withRowAnimation:UITableViewRowAnimationFade];
                    
