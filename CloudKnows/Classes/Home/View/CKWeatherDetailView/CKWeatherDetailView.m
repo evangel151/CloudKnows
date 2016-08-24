@@ -7,7 +7,11 @@
 //
 
 #import "CKWeatherDetailView.h"
+#import "CKWeatherDetailCell.h"
+
 #import "CKCityModel.h"
+#import "CKWeatherData.h"
+#import "CKWeatherModel.h"
 
 #import <Masonry.h>
 
@@ -21,9 +25,17 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) NSMutableArray *weatherList;
+@property (nonatomic, strong) CKTodayWeather *today;
+
+@property (nonatomic, assign) NSInteger todayIndex;
+@property (nonatomic, assign) NSInteger currentIndex;
+
 @end
 
 @implementation CKWeatherDetailView
+
+static NSString *detailCellIdentifier = @"detailCellID";
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -39,7 +51,7 @@
         // 城市名
         _cityNameLabel = [UILabel labelWithTextColor:[UIColor whiteColor]
                                      backgroundColor:[UIColor clearColor]
-                                            fontSize:19
+                                            fontSize:31
                                                lines:1
                                        textAlignment:NSTextAlignmentCenter];
         _cityNameLabel.text = @"城市名 : 北京";
@@ -73,7 +85,9 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.backgroundColor = Color_Theme_Alpha;
+        _tableView.rowHeight = 115;
+        _tableView.backgroundColor = [UIColor clearColor];
+        [_tableView registerClass:[CKWeatherDetailCell class] forCellReuseIdentifier:detailCellIdentifier];
         [self addSubview:_tableView];
         
         [_waller mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,6 +125,41 @@
     return self;
 }
 
+
+
++ (void)showWithWeatherData:(CKWeatherData *)data {
+    CKWeatherDetailView *detailView = [[CKWeatherDetailView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    detailView.alpha = 0.0;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:detailView];
+    
+    
+    detailView.weatherList = [NSMutableArray array];
+    [detailView.weatherList addObjectsFromArray:data.historyArray];
+    
+    detailView.todayIndex = data.historyArray.count;
+    
+    [detailView.weatherList addObject:data.today];
+    detailView.today = data.today;
+    
+    [detailView.weatherList addObjectsFromArray:data.forecastArray];
+    
+    [detailView buildUIWithWeatherData:data];
+    
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        detailView.alpha = 1.0;
+    }];
+}
+
+- (void)buildUIWithWeatherData:(CKWeatherData *)data {
+    
+    _cityNameLabel.text = data.cityName;
+    _temperatureLabel.text = [NSString stringWithFormat:@"当前气温: %@",data.today.curTemp];;
+    CKWeatherModel *model = [_weatherList objectAtIndex:data.historyArray.count];
+    _dateLabel.text = [NSString stringWithFormat:@"%@ %@",model.date,model.week];
+}
+
 + (void)show {
     CKWeatherDetailView *detailView = [[CKWeatherDetailView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     detailView.alpha = 0.0;
@@ -129,23 +178,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    NSInteger count = self.weatherList.count;
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"ID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    cell.backgroundColor = LJRandomColor;
+
+    CKWeatherDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:detailCellIdentifier];
+    CKWeatherModel *model = [_weatherList objectAtIndex:indexPath.row];
+    cell.model = model;
+//    CKWeatherModel *todayModel = [_weatherList objectAtIndex:7];
+//    if ([model.date isEqualToString:todayModel.date]) {
+//        cell.dateLabel.backgroundColor = [UIColor orangeColor];
+//    }
+    
     return cell;
 }
 
 #pragma mark - custom
 // 移除
 - (void)remove {
-    
+    // 将伪modal弹出方式换成淡化方式
     [UIView animateWithDuration:0.4 animations:^{
         self.alpha = 0.0;
     } completion:^(BOOL finished) {

@@ -141,6 +141,7 @@ static NSString *cellID = @"cellIndentifier";
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD showWithStatus:@"Searching...."];
     WeakSelf;
+
     [CKNetWorkManager requestDataWithCityName:searchBar.text Complete:^(id obj) {
         CKCityData *data = (CKCityData *)obj;
         if (data.cityList == nil || data.cityList.count == 0) {
@@ -168,6 +169,9 @@ static NSString *cellID = @"cellIndentifier";
 - (void)cancelSearch {
     [self.searchBar resignFirstResponder];
 }
+
+
+
 
 
 @end

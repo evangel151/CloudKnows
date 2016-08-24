@@ -64,8 +64,11 @@ static NSString *cellIdentifier = @"weatherCell";
     self.navigationController.navigationBar.hidden = YES;
     [self setupRandomWaller];
     [self setupNullDataView];
-
 }
+
+//- (void)myTimer {
+//    
+//}
 
 - (void)setupTableView {
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -112,7 +115,6 @@ static NSString *cellIdentifier = @"weatherCell";
 - (void)setupNullDataView {
     if (![[CKCityManager shareInstance] hasSelectedCity]) {
         if (!_nullView) {
-             NSLog(@"logSomething——————");
             _nullView = [[NullDataView alloc] initWithFrame:[UIScreen mainScreen].bounds];
             [self.view addSubview:_nullView];
         }
@@ -253,7 +255,7 @@ static NSString *cellIdentifier = @"weatherCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    [CKWeatherDetailView show];
+    [CKWeatherDetailView showWithWeatherData:[_weatherList objectAtIndex:indexPath.row]];
 }
 
 

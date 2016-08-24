@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CKWeatherData;
 @interface CKWeatherDetailView : UIView
 
 + (void)show;
+
++ (void)showWithWeatherData:(CKWeatherData *)data;
 
 @end

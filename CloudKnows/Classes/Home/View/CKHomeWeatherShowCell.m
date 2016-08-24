@@ -106,7 +106,7 @@
     self.currentTempLabel.text = data.today.curTemp;
     self.areaLabel.text = data.cityName;
     self.weatherTypeLabel.text = data.today.type;
-    self.L_H_TempLabel.text = [NSString stringWithFormat:@"最低气温 %@℃ ~ 最高气温%@℃",data.today.lowtemp,data.today.hightemp];
+    self.L_H_TempLabel.text = [NSString stringWithFormat:@"最低气温 %@ ~ 最高气温%@",data.today.lowtemp,data.today.hightemp];
 }
 
 

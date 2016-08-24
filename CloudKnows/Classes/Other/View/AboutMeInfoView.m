@@ -10,7 +10,9 @@
 #import <Masonry.h>
 
 @interface AboutMeInfoView ()
+/** 姓名 */
 @property (nonatomic, strong) UILabel *nameLabel;
+/** 个人信息 */
 @property (nonatomic, strong) UILabel *infoLabel;
 @end
 
@@ -19,8 +21,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
-//        self.backgroundColor = [UIColor purpleColor];
         
         _nameLabel = [UILabel labelWithTextColor:[UIColor whiteColor]
                                  backgroundColor:[UIColor clearColor]

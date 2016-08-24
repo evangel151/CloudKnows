@@ -7,7 +7,7 @@
 //
 
 #import "CKWeatherData.h"
-#import "CKWeatherModel.h"
+//#import "CKWeatherModel.h"
 #import <MJExtension.h>
 
 @implementation CKWeatherData

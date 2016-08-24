@@ -10,10 +10,12 @@
 #import <Masonry.h>
 
 @interface AboutMeDetailView ()
-
+/** blog */
 @property (nonatomic, strong) UIView *JianShuView;
 @property (nonatomic, strong) UILabel *JianShuLabel;
 @property (nonatomic, strong) UIImageView *JianShuIcon;
+
+/** GitHub */
 @property (nonatomic, strong) UIView *GitHubView;
 @property (nonatomic, strong) UILabel *GitHubLabel;
 @property (nonatomic, strong) UIImageView *GitHubIcon;
@@ -67,7 +69,7 @@
         
         _backButton = [[UIButton alloc] init];
         _backButton.titleLabel.font = [UIFont systemFontOfSize:20];
-        [_backButton setBackgroundColor:[UIColor purpleColor]];
+        [_backButton setBackgroundColor:Color_Theme_Alpha];
         _backButton.layer.cornerRadius = 5;
         [_backButton setTitle:@"返回首页" forState:UIControlStateNormal];
         [_backButton setTintColor:[UIColor whiteColor]];
@@ -107,7 +109,7 @@
             make.width.equalTo(@(100));
         }];
         
-        // 感觉这样写效果还不错
+        // 感觉这样写效果还不错  使用masonry达到stack view的效果
         NSArray *subViewsArray = @[_JianShuView, _GitHubView, _backButton];
         [subViewsArray mas_distributeViewsAlongAxis:MASAxisTypeVertical
                                 withFixedItemLength:44
